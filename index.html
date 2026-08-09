@@ -527,6 +527,16 @@
     color:var(--accent-red);
     filter:drop-shadow(0 0 34px rgba(83,89,201,0.55));
   }
+  /* variant: a full illustration standing in for the dark placeholder card */
+  .story-visual-photo{
+    background:var(--bg-surface);
+  }
+  .story-photo{
+    width:100%; height:100%;
+    object-fit:cover;
+    object-position:center;
+    display:block;
+  }
 
   /* scroll-linked slow zoom + blur-to-focus, driven by JS through --sp (0 → 1) */
   .story-zoom{
@@ -789,14 +799,8 @@
       <div class="story-panels">
 
         <article class="story-panel reveal-from-right">
-          <div class="story-visual story-zoom" data-story-visual>
-            <div class="story-visual-glow" aria-hidden="true"></div>
-            <svg class="story-glyph" viewBox="0 0 64 64" fill="none" aria-hidden="true">
-              <path d="M32 9.6v12.8M32 41.6v12.8M9.6 32h12.8M41.6 32h12.8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-              <circle cx="32" cy="32" r="6.4" stroke="currentColor" stroke-width="2"/>
-            </svg>
-            <div class="story-chip float-badge" style="top:16px; left:16px;"><span class="story-chip-dot"></span>Precision</div>
-            <div class="story-chip float-badge float-b" style="bottom:16px; right:16px;">Mechanics · Mindset</div>
+          <div class="story-visual story-visual-photo story-zoom" data-story-visual>
+            <img class="story-photo" src="precision-illustration.png" alt="Precision: focus, accuracy, control — mechanics, adapt, dominate" loading="lazy" decoding="async">
           </div>
           <div class="story-copy">
             <h3 class="split-words" data-split>Control your aim. Control your growth.</h3>
@@ -809,25 +813,14 @@
             <h3 class="split-words" data-split>Celebrates the process.</h3>
             <p class="split-words" data-split>The best players aren't created overnight. They are built through dedication, patience, and the decision to keep improving when progress feels slow.</p>
           </div>
-          <div class="story-visual story-zoom" data-story-visual>
-            <div class="story-visual-glow" aria-hidden="true"></div>
-            <svg class="story-glyph" viewBox="0 0 64 64" fill="none" aria-hidden="true">
-              <path d="M32 19.2v16l9.6 6.4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-              <circle cx="32" cy="32" r="22.4" stroke="currentColor" stroke-width="2"/>
-            </svg>
-            <div class="story-chip float-badge" style="top:16px; right:16px;"><span class="story-chip-dot"></span>Consistency</div>
-            <div class="story-chip float-badge float-c" style="bottom:16px; left:16px;">Patience Over Speed</div>
+          <div class="story-visual story-visual-photo story-zoom" data-story-visual>
+            <img class="story-photo" src="consistency-illustration.png" alt="Consistency: show up, stay focused, keep building — patience over speed" loading="lazy" decoding="async">
           </div>
         </article>
 
         <article class="story-panel reveal-from-right">
-          <div class="story-visual story-zoom" data-story-visual>
-            <div class="story-visual-glow" aria-hidden="true"></div>
-            <svg class="story-glyph" viewBox="0 0 64 64" fill="none" aria-hidden="true">
-              <path d="M12.8 48l12.8-12.8 9.6 9.6 16-19.2" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-            <div class="story-chip float-badge" style="top:16px; left:16px;"><span class="story-chip-dot"></span>Mindset</div>
-            <div class="story-chip float-badge float-b" style="bottom:16px; right:16px;">Daily Improvement</div>
+          <div class="story-visual story-visual-photo story-zoom" data-story-visual>
+            <img class="story-photo" src="mindset-illustration.png" alt="Mindset: grow, adapt, evolve — daily improvement" loading="lazy" decoding="async">
           </div>
           <div class="story-copy">
             <h3 class="split-words" data-split>Where improvement becomes a mindset.</h3>
