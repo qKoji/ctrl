@@ -2,10 +2,10 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
-<title>*</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>ッ</title>
 <link rel="icon" type="image/x-icon" href="favicon.ico">
-<meta name="description" content="*Aim*" />
+<meta name="description" content="Control your aim ッ" />
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@500;600;700&family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
@@ -145,7 +145,6 @@
     border-bottom:1px solid var(--border-strong);
     z-index:1000;
     white-space:nowrap;
-    padding-top:env(safe-area-inset-top, 0px);
   }
   .ticker-track{
     display:inline-flex;
@@ -416,7 +415,6 @@
   .hero.linkbio{
     padding:40px 0;
     min-height:calc(100vh - 68px);
-    min-height:calc(100dvh - 68px);
     display:flex;
     align-items:center;
     justify-content:center;
@@ -629,7 +627,7 @@
     overflow:hidden;
   }
   /* ---------- SWIPE / TAP ENTER GATE ---------- */
-  html.gate-active, body.gate-active{overflow:hidden; height:100%;}
+  body.gate-active{overflow:hidden; height:100%;}
   .ticker{
     transition:transform 2.6s cubic-bezier(.45,0,.2,1);
     will-change:transform;
@@ -876,7 +874,6 @@
     var footer = document.querySelector('footer');
     var entered = false;
 
-    document.documentElement.classList.add('gate-active');
     document.body.classList.add('gate-active');
     if (main) main.setAttribute('aria-hidden', 'true');
     if (footer) footer.setAttribute('aria-hidden', 'true');
@@ -885,7 +882,6 @@
       if (entered) return;
       entered = true;
       gate.classList.add('leaving');
-      document.documentElement.classList.remove('gate-active');
       document.body.classList.remove('gate-active');
       if (main) main.removeAttribute('aria-hidden');
       if (footer) footer.removeAttribute('aria-hidden');
