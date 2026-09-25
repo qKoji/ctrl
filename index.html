@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>*</title>
+<title>CTRL</title>
 <link rel="icon" type="image/x-icon" href="favicon-v2.ico">
 <meta name="description" content="Control your aim ッ" />
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -656,16 +656,16 @@
     width:100%;
     height:100%;
     object-fit:cover;
-    object-position:68% 22%;
+    object-position:52% 38%;
     image-rendering:auto;
     z-index:0;
     pointer-events:none;
   }
   @media (max-width:700px){
-    .gate-art{ object-position:72% 18%; }
+    .gate-art{ object-position:56% 40%; }
   }
   @media (max-width:700px) and (orientation:portrait){
-    .gate-art{ object-position:75% 16%; }
+    .gate-art{ object-position:60% 42%; }
   }
   .gate-art-scrim{
     position:absolute;
@@ -723,7 +723,7 @@
   <img class="gate-art" src="gate-art.png" alt="" aria-hidden="true" fetchpriority="high" decoding="async">
   <div class="gate-art-scrim" aria-hidden="true"></div>
   <span class="ctrl3d-wrap gate-logo" aria-hidden="true">
-    <div class="ctrl3d" data-ctrl3d data-w="210"></div>
+    <div class="ctrl3d" data-ctrl3d data-text="*" data-depth="4.5" data-bevel-thickness="0.6" data-bevel-size="0.35" data-w="210"></div>
   </span>
   <div class="gate-prompt">
     <span class="gate-chevron" aria-hidden="true"></span>
@@ -765,7 +765,7 @@
       <div class="linkbio-inner">
         <div class="linkbio-logo hero-zoom">
           <span class="ctrl3d-wrap">
-            <div class="ctrl3d" data-ctrl3d data-w="208" data-static="true"></div>
+            <div class="ctrl3d" data-ctrl3d data-text="Welcome" data-w="208" data-static="true"></div>
           </span>
         </div>
         <div class="linkbio-time" id="linkbioTime" aria-hidden="true"></div>
@@ -1013,15 +1013,15 @@
     var maxTiltY = 55, maxTiltX = 32;  // degrees, matches old hover-tilt range
     var SPIN_MS = 7000;                 // full rotation duration
 
-    function buildTextGeometry(font){
-      var geo = new THREE.TextGeometry('CTRL', {
+    function buildTextGeometry(font, text, depth, bevelThickness, bevelSize){
+      var geo = new THREE.TextGeometry(text, {
         font: font,
         size: 60,
-        height: 18,
+        height: depth,
         curveSegments: 8,
         bevelEnabled: true,
-        bevelThickness: 2.4,
-        bevelSize: 1.4,
+        bevelThickness: bevelThickness,
+        bevelSize: bevelSize,
         bevelSegments: 4
       });
       // Italic-style slant, matching the old font-style:italic look
@@ -1071,7 +1071,11 @@
       fill.position.set(1, 0.3, 1);
       scene.add(fill);
 
-      var geo = buildTextGeometry(font);
+      var badgeText = container.dataset.text || 'CTRL';
+      var badgeDepth = parseFloat(container.dataset.depth) || 18;
+      var badgeBevelThickness = parseFloat(container.dataset.bevelThickness) || 2.4;
+      var badgeBevelSize = parseFloat(container.dataset.bevelSize) || 1.4;
+      var geo = buildTextGeometry(font, badgeText, badgeDepth, badgeBevelThickness, badgeBevelSize);
       var faceMat = new THREE.MeshStandardMaterial({ color: 0x8a90e6, metalness: 0.55, roughness: 0.3 });
       var sideMat = new THREE.MeshStandardMaterial({ color: 0x3c3f8c, metalness: 0.5, roughness: 0.5 });
       var mesh = new THREE.Mesh(geo, [faceMat, sideMat]);
