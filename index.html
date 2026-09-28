@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>CTRL</title>
+<title>*</title>
 <link rel="icon" type="image/x-icon" href="favicon-v2.ico">
 <meta name="description" content="Control your aim ッ" />
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -621,11 +621,6 @@
     .section{padding:72px 0;}
   }
 
-  #problem{
-    scroll-margin-top:56px;
-    position:relative;
-    overflow:hidden;
-  }
   /* ---------- SWIPE / TAP ENTER GATE ---------- */
   body.gate-active{overflow:hidden; height:100%;}
   .ticker{
@@ -715,9 +710,11 @@
 <body>
 <a class="skip-link" href="#main">Skip to content</a>
 
+<!-- PETALS DISABLED (uncomment to restore):
 <video id="petalSource" src="petals-overlay.mp4" autoplay loop muted playsinline aria-hidden="true"
   style="position:fixed; left:-9999px; top:-9999px; width:2px; height:2px; opacity:0; pointer-events:none;"></video>
 <canvas class="petal-bg" id="petalCanvas" aria-hidden="true"></canvas>
+-->
 
 <div id="enterGate" class="enter-gate" role="button" tabindex="0" aria-label="Tap or swipe to enter CTRL">
   <img class="gate-art" src="gate-art.png" alt="" aria-hidden="true" fetchpriority="high" decoding="async">
@@ -758,9 +755,11 @@
   <section class="hero linkbio" id="top">
     <div class="parallax-layer" data-parallax="0.12" style="width:420px; height:420px; left:8%; top:-8%; background:radial-gradient(circle, rgba(83,89,201,0.14), transparent 70%); border-radius:50%;" aria-hidden="true"></div>
     <div class="parallax-layer" data-parallax="-0.08" style="width:360px; height:360px; right:6%; bottom:-4%; background:radial-gradient(circle, rgba(226,150,183,0.14), transparent 70%); border-radius:50%;" aria-hidden="true"></div>
-    <span class="float-badge" style="top:18%; left:10%; width:5px; height:5px; border-radius:50%; background:var(--accent-cyan); opacity:.5;" aria-hidden="true"></span>
-    <span class="float-badge float-b" style="top:26%; right:12%; width:4px; height:4px; border-radius:50%; background:var(--accent-cyan); opacity:.4;" aria-hidden="true"></span>
-    <span class="float-badge float-c" style="bottom:20%; left:16%; width:4px; height:4px; border-radius:50%; background:var(--accent-cyan); opacity:.35;" aria-hidden="true"></span>
+    <!-- DOTS DISABLED (uncomment to restore; change var(accent-cyan) back to var(--accent-cyan)):
+    <span class="float-badge" style="top:18%; left:10%; width:5px; height:5px; border-radius:50%; background:var(accent-cyan); opacity:.5;" aria-hidden="true"></span>
+    <span class="float-badge float-b" style="top:26%; right:12%; width:4px; height:4px; border-radius:50%; background:var(accent-cyan); opacity:.4;" aria-hidden="true"></span>
+    <span class="float-badge float-c" style="bottom:20%; left:16%; width:4px; height:4px; border-radius:50%; background:var(accent-cyan); opacity:.35;" aria-hidden="true"></span>
+    -->
     <div class="wrap">
       <div class="linkbio-inner">
         <div class="linkbio-logo hero-zoom">
@@ -772,7 +771,7 @@
 
         <nav class="linkbio-links" aria-label="Quick links">
           <a href="https://discord.gg/2m6spdfBh6" target="_blank" rel="noopener noreferrer" class="linkbio-link">Join the Discord</a>
-          <a href="#problem" class="linkbio-link">About Us</a>
+          <a href="https://guns.lol/qkoji" target="_blank" rel="noopener noreferrer" class="linkbio-link">*</a>
         </nav>
 
         <div class="linkbio-social">
@@ -788,49 +787,7 @@
   </section>
 
 
-  <section class="section border-top" id="problem" aria-labelledby="problem-head">
-    <div class="parallax-layer" data-parallax="0.06" style="width:520px; height:520px; right:-6%; top:6%; background:radial-gradient(circle, rgba(83,89,201,0.10), transparent 70%); border-radius:50%;" aria-hidden="true"></div>
-    <div class="wrap">
-      <div class="section-head reveal">
-        <div class="eyebrow" id="problem-eyebrow">What is ctrl?</div>
-        <h2 id="problem-head" class="split-words" data-split>제어</h2>
-        <p class="split-words" data-split>Community built for players who are passionate about improvement. A place where aimers, competitors, and creators come together to share their progress, discuss mechanics, and push each other forward.</p>
-      </div>
-      <div class="story-panels">
 
-        <article class="story-panel reveal-from-right">
-          <div class="story-visual story-visual-photo story-zoom" data-story-visual>
-            <img class="story-photo" src="precision-illustration.png" alt="Precision: focus, accuracy, control — mechanics, adapt, dominate" loading="lazy" decoding="async">
-          </div>
-          <div class="story-copy">
-            <h3 class="split-words" data-split>Control your aim. Control your growth.</h3>
-            <p class="split-words" data-split>We focus on precision, discipline, and helping gamers refine their mechanics, mindset, and performance.</p>
-          </div>
-        </article>
-
-        <article class="story-panel reveal-from-left">
-          <div class="story-copy">
-            <h3 class="split-words" data-split>Celebrates the process.</h3>
-            <p class="split-words" data-split>The best players aren't created overnight. They are built through dedication, patience, and the decision to keep improving when progress feels slow.</p>
-          </div>
-          <div class="story-visual story-visual-photo story-zoom" data-story-visual>
-            <img class="story-photo" src="consistency-illustration.png" alt="Consistency: show up, stay focused, keep building — patience over speed" loading="lazy" decoding="async">
-          </div>
-        </article>
-
-        <article class="story-panel reveal-from-right">
-          <div class="story-visual story-visual-photo story-zoom" data-story-visual>
-            <img class="story-photo" src="mindset-illustration.png" alt="Mindset: grow, adapt, evolve — daily improvement" loading="lazy" decoding="async">
-          </div>
-          <div class="story-copy">
-            <h3 class="split-words" data-split>Where improvement becomes a mindset.</h3>
-            <p class="split-words" data-split>Aim isn't just a skill — it's a craft built through patience, dedication, and the desire to improve every day.</p>
-          </div>
-        </article>
-
-      </div>
-    </div>
-  </section>
 
 </main>
 
@@ -1318,36 +1275,6 @@
   })();
 
 
-  // Slow, eased smooth-scroll for the "What's Holding You Back" link
-  (function(){
-    var link = document.querySelector('a[href="#problem"].linkbio-link');
-    var target = document.getElementById('problem');
-    if (!link || !target) return;
-
-    link.addEventListener('click', function(e){
-      e.preventDefault();
-      var startY = window.pageYOffset;
-      var targetY = startY + target.getBoundingClientRect().top - 56; // matches scroll-margin-top
-      var distance = targetY - startY;
-      var duration = 1400; // ms — slow, deliberate slide
-      var startTime = null;
-
-      function easeInOutCubic(t){
-        return t < 0.5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2;
-      }
-
-      function step(timestamp){
-        if (startTime === null) startTime = timestamp;
-        var elapsed = timestamp - startTime;
-        var progress = Math.min(elapsed / duration, 1);
-        window.scrollTo(0, startY + distance * easeInOutCubic(progress));
-        if (progress < 1) {
-          window.requestAnimationFrame(step);
-        }
-      }
-      window.requestAnimationFrame(step);
-    });
-  })();
 </script>
 </body>
 </html>
